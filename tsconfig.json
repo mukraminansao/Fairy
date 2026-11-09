@@ -1,0 +1,53 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "strict": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    "allowJs": true
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts",
+    ".next-backend/types/**/*.ts",
+    ".next-backend/dev/types/**/*.ts",
+    ".next-backend-build/types/**/*.ts",
+    ".next-backend-build/dev/types/**/*.ts",
+    ".next-camera/types/**/*.ts",
+    ".next-camera/dev/types/**/*.ts",
+    ".next-camera-edge/types/**/*.ts",
+    ".next-camera-edge/dev/types/**/*.ts",
+    ".next-release/types/**/*.ts",
+    ".next-release/dev/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    ".next-backend",
+    ".next-backend-build"
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "b-peach-souffle": {
+    "area": "lipColor",
+    "color": "#d68772"
+  },
+  "b-apricot-veil-shadow": {
+    "area": "shadowColor",
+    "color": "#d6865e"
+  },
+  "b-nectarine-flush": {
+    "area": "blushColor",
+    "color": "#ec8064"
+  },
+  "b-peach-skin-veil": {
+    "area": "skinColor",
+    "color": "#e1ae90"
+  },
+  "b-soft-taupe-sculpt": {
+    "area": "contourColor",
+    "color": "#8b604f"
+  },
+  "b-honey-brow": {
+    "area": "browColor",
+    "color": "#946747"
+  },
+  "b-cocoa-feather-lash": {
+    "area": "lashColor",
+    "color": "#50302a"
+  },
+  "b-copper-silk-liner": {
+    "area": "linerColor",
+    "color": "#9d5140"
+  },
+  "b-peach-glaze": {
+    "area": "lipColor",
+    "color": "#db8d80"
+  },
+  "b-toffee-velvet": {
+    "area": "lipColor",
+    "color": "#a85d4c"
+  },
+  "b-espresso-satin-shadow": {
+    "area": "shadowColor",
+    "color": "#77503e"
+  },
+  "b-burnt-honey-flush": {
+    "area": "blushColor",
+    "color": "#bc653f"
+  },
+  "b-caramel-skin-tint": {
+    "area": "skinColor",
+    "color": "#c48864"
+  },
+  "b-mocha-cream-contour": {
+    "area": "contourColor",
+    "color": "#694431"
+  },
+  "b-espresso-brow-pencil": {
+    "area": "browColor",
+    "color": "#54372a"
+  },
+  "b-umber-lash": {
+    "area": "lashColor",
+    "color": "#3d2824"
+  },
+  "b-roasted-bronze-liner": {
+    "area": "linerColor",
+    "color": "#664239"
+  },
+  "b-caramel-balm": {
+    "area": "lipColor",
+    "color": "#bb7c68"
+  },
+  "b-plum-silk-lip": {
+    "area": "lipColor",
+    "color": "#8a4b62"
+  },
+  "b-smoke-pearl-shadow": {
+    "area": "shadowColor",
+    "color": "#625775"
+  },
+  "b-mauve-cloud-blush": {
+    "area": "blushColor",
+    "color": "#b76581"
+  },
+  "b-cool-pearl-tint": {
+    "area": "skinColor",
+    "color": "#d5a49f"
+  },
+  "b-cool-sculpt-duo": {
+    "area": "contourColor",
+    "color": "#74606a"
+  },
+  "b-ash-brow-pomade": {
+    "area": "browColor",
+    "color": "#59505b"
+  },
+  "b-midnight-lash": {
+    "area": "lashColor",
+    "color": "#292631"
+  },
+  "b-violet-ink-liner": {
+    "area": "linerColor",
+    "color": "#493659"
+  },
+  "b-moonstone-gloss": {
+    "area": "lipColor",
+    "color": "#b37c9a"
+  }
+}

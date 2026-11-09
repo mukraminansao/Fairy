@@ -1,0 +1,382 @@
+// FAIRY PostgreSQL starting schema. Codex must run Prisma validate with the
+// installed compatible version, generate migration SQL, and review it before use.
+// Do NOT point a migration at an unverified existing/production database.
+generator client {
+  provider = "prisma-client"
+  moduleFormat = "cjs"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum UserRole {
+  CUSTOMER
+  STAFF
+  ADMIN
+}
+
+enum ProductCategory {
+  FASHION
+  MAKEUP
+  SKINCARE
+  ACCESSORIES
+  FRAGRANCE
+}
+
+enum ProductStatus {
+  DRAFT
+  ACTIVE
+  ARCHIVED
+}
+
+enum SceneKind {
+  FASHION
+  BEAUTY
+}
+
+enum LookKind {
+  FASHION
+  BEAUTY
+}
+
+enum OrderStatus {
+  PENDING
+  CONFIRMED
+  CANCELLED
+  FULFILLED
+  REFUNDED
+}
+
+enum PaymentStatus {
+  NOT_CONFIGURED
+  PENDING
+  SUCCEEDED
+  FAILED
+  REFUNDED
+}
+
+model User {
+  id            String     @id @default(uuid())
+  name          String?
+  email         String?    @unique
+  emailVerified DateTime?
+  image         String?
+  role          UserRole   @default(CUSTOMER)
+  createdAt     DateTime   @default(now())
+  updatedAt     DateTime   @updatedAt
+
+  accounts      Account[]
+  sessions      Session[]
+  addresses     Address[]
+  cart          Cart?
+  wishlist      WishlistItem[]
+  looks         SavedLook[]
+  orders        Order[]
+  auditEvents   AuditLog[] @relation("AuditActor")
+}
+
+// Canonical Auth.js Prisma adapter model names and fields.
+model Account {
+  id                String  @id @default(uuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@index([userId])
+}
+
+model Session {
+  id           String   @id @default(uuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model VerificationToken {
+  identifier String
+  token      String
+  expires    DateTime
+
+  @@id([identifier, token])
+}
+
+model Product {
+  id             String          @id // Preserve fixture IDs, e.g. f-pendant
+  slug           String          @unique
+  sku            String          @unique
+  name           String
+  description    String          @default("")
+  category       ProductCategory
+  status         ProductStatus   @default(DRAFT)
+  currency       String          @default("USD") @db.VarChar(3)
+  tryOnSlot      String?
+  demoOnly       Boolean         @default(true)
+  details        Json?
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+
+  variants       ProductVariant[]
+  images         ProductImage[]
+  hotspots       Hotspot[]
+  wishlistedBy   WishlistItem[]
+
+  @@index([category, status])
+  @@index([name])
+}
+
+model ProductVariant {
+  id            String    @id // Stable seed IDs: variant-f-pendant-default etc.
+  productId     String
+  sku           String    @unique
+  name          String
+  options       Json?
+  priceMinor    Int
+  currency      String    @default("USD") @db.VarChar(3)
+  isActive      Boolean   @default(true)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  product       Product         @relation(fields: [productId], references: [id], onDelete: Restrict)
+  inventory     Inventory?
+  cartItems     CartItem[]
+  savedLookItems SavedLookItem[]
+  orderItems    OrderItem[]
+
+  @@index([productId, isActive])
+}
+
+model ProductImage {
+  id          String   @id @default(uuid())
+  productId   String
+  path        String
+  alt         String
+  sortOrder   Int      @default(0)
+  createdAt   DateTime @default(now())
+
+  product Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@unique([productId, path])
+  @@index([productId, sortOrder])
+}
+
+model Inventory {
+  id          String   @id @default(uuid())
+  variantId   String   @unique
+  onHand      Int      @default(0)
+  reserved    Int      @default(0)
+  updatedAt   DateTime @updatedAt
+
+  variant ProductVariant @relation(fields: [variantId], references: [id], onDelete: Restrict)
+}
+
+model Scene {
+  id                       String    @id // Preserve fixture id (slug)
+  slug                     String    @unique
+  title                    String
+  subtitle                 String?
+  kind                     SceneKind
+  imagePath                String
+  imageWidth               Int
+  imageHeight              Int
+  photoCrop                Json?
+  position                 Int      @default(0)
+  defaultSelectedProductId String?
+  isPublished              Boolean   @default(true)
+  createdAt                DateTime  @default(now())
+  updatedAt                DateTime  @updatedAt
+
+  hotspots Hotspot[]
+
+  @@index([kind, isPublished])
+}
+
+model Hotspot {
+  id        String   @id @default(uuid())
+  sceneId   String
+  productId String
+  rect      Json     // [x, y, width, height] in intrinsic image coordinates
+  shape     String?
+  position  Int      @default(0)
+  priority  Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  scene   Scene   @relation(fields: [sceneId], references: [id], onDelete: Cascade)
+  product Product @relation(fields: [productId], references: [id], onDelete: Restrict)
+
+  @@unique([sceneId, productId])
+  @@index([sceneId, priority])
+}
+
+model Cart {
+  id        String    @id @default(uuid())
+  userId    String    @unique
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  user  User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  items CartItem[]
+}
+
+model CartItem {
+  id        String   @id @default(uuid())
+  cartId    String
+  variantId String
+  quantity  Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  cart    Cart           @relation(fields: [cartId], references: [id], onDelete: Cascade)
+  variant ProductVariant @relation(fields: [variantId], references: [id], onDelete: Restrict)
+
+  @@unique([cartId, variantId])
+}
+
+model WishlistItem {
+  id        String   @id @default(uuid())
+  userId    String
+  productId String
+  createdAt DateTime @default(now())
+
+  user    User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  product Product @relation(fields: [productId], references: [id], onDelete: Restrict)
+
+  @@unique([userId, productId])
+}
+
+model SavedLook {
+  id        String   @id @default(uuid())
+  userId    String
+  name      String
+  kind      LookKind
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user  User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  items SavedLookItem[]
+
+  @@index([userId, updatedAt])
+}
+
+model SavedLookItem {
+  id            String @id @default(uuid())
+  lookId        String
+  variantId     String
+  position      Int
+  configuration Json?  // slot, shadeId, intensity, finish; NEVER selfie data
+
+  look    SavedLook      @relation(fields: [lookId], references: [id], onDelete: Cascade)
+  variant ProductVariant @relation(fields: [variantId], references: [id], onDelete: Restrict)
+
+  @@unique([lookId, position])
+  @@index([variantId])
+}
+
+model Address {
+  id          String   @id @default(uuid())
+  userId      String
+  label       String?
+  recipient   String
+  line1       String
+  line2       String?
+  city        String
+  region      String?
+  postalCode  String?
+  countryCode String   @db.VarChar(2)
+  phone       String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+// Schema scaffolds only: no live order creation without checkout integration.
+model Order {
+  id              String      @id @default(uuid())
+  userId          String
+  status          OrderStatus @default(PENDING)
+  currency        String      @db.VarChar(3)
+  subtotalMinor   Int
+  shippingMinor   Int         @default(0)
+  taxMinor        Int         @default(0)
+  discountMinor   Int         @default(0)
+  totalMinor      Int
+  addressSnapshot Json?
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+
+  user     User        @relation(fields: [userId], references: [id], onDelete: Restrict)
+  items    OrderItem[]
+  payments Payment[]
+
+  @@index([userId, createdAt])
+  @@index([status, createdAt])
+}
+
+model OrderItem {
+  id             String @id @default(uuid())
+  orderId        String
+  variantId      String
+  productName    String
+  variantName    String
+  skuSnapshot    String
+  quantity       Int
+  unitPriceMinor Int
+  currency       String @db.VarChar(3)
+
+  order   Order          @relation(fields: [orderId], references: [id], onDelete: Restrict)
+  variant ProductVariant @relation(fields: [variantId], references: [id], onDelete: Restrict)
+
+  @@index([orderId])
+}
+
+model Payment {
+  id               String        @id @default(uuid())
+  orderId          String
+  provider         String        @default("NOT_CONFIGURED")
+  providerRef      String?       @unique
+  status           PaymentStatus @default(NOT_CONFIGURED)
+  amountMinor      Int
+  currency         String        @db.VarChar(3)
+  idempotencyKey   String?       @unique
+  createdAt        DateTime      @default(now())
+  updatedAt        DateTime      @updatedAt
+
+  order Order @relation(fields: [orderId], references: [id], onDelete: Restrict)
+
+  @@index([orderId, status])
+}
+
+model AuditLog {
+  id         String   @id @default(uuid())
+  actorId    String?
+  action     String
+  targetType String
+  targetId   String
+  details    Json?
+  createdAt  DateTime @default(now())
+
+  actor User? @relation("AuditActor", fields: [actorId], references: [id], onDelete: SetNull)
+
+  @@index([targetType, targetId, createdAt])
+  @@index([actorId, createdAt])
+}

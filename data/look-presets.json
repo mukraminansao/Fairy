@@ -1,0 +1,33 @@
+{
+  "demoOnly": true,
+  "presets": [
+    {
+      "id": "monochrome-street-default",
+      "title": "Monochrome Street",
+      "kind": "fashion",
+      "sceneId": "monochrome-street",
+      "slots": {
+        "jacket": "f-jacket",
+        "top": "f-tee",
+        "pants": "f-pants",
+        "shoes": "f-shoes",
+        "jewelry": ["f-pendant"]
+      },
+      "previewMode": "2d"
+    },
+    {
+      "id": "soft-rose-edit-default",
+      "title": "Soft Rose Edit",
+      "kind": "beauty",
+      "sceneId": "soft-rose-edit",
+      "products": [
+        { "productId": "b-lipstick", "shadeId": "soft-mocha", "finish": "satin", "intensity": 75 },
+        { "productId": "b-blush", "shadeId": "rose", "intensity": 45 },
+        { "productId": "b-foundation", "shadeId": "natural-beige", "intensity": 35 },
+        { "productId": "b-eyeshadow", "shadeId": "warm-nude", "intensity": 40 }
+      ],
+      "previewMode": "catalog-model",
+      "comparePosition": 50
+    }
+  ]
+}

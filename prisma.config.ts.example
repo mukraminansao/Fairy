@@ -1,0 +1,15 @@
+// Copy to prisma.config.ts only when creating the runnable app.
+// Confirm the installed Prisma major and PostgreSQL adapter support this config.
+import "dotenv/config";
+import { defineConfig, env } from "prisma/config";
+
+export default defineConfig({
+  schema: "prisma/schema.prisma",
+  migrations: {
+    path: "prisma/migrations",
+    seed: "tsx prisma/seed.ts",
+  },
+  datasource: {
+    url: env("DATABASE_URL"),
+  },
+});

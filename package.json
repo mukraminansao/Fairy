@@ -1,0 +1,53 @@
+{
+  "name": "fairy",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1",
+    "build": "next build",
+    "start": "next start --hostname 127.0.0.1",
+    "start:host": "next start --hostname 0.0.0.0",
+    "typecheck": "next typegen && tsc --noEmit",
+    "test": "playwright test",
+    "lint": "eslint",
+    "db:generate": "prisma generate",
+    "db:validate": "prisma validate",
+    "db:migrate": "prisma migrate deploy",
+    "db:seed": "prisma db seed",
+    "postinstall": "prisma generate",
+    "test:backend": "playwright test -c playwright.backend.config.ts",
+    "db:promote-local-admin": "tsx scripts/promote-local-admin.ts",
+    "camera:setup": "node scripts/prepare-camera.mjs",
+    "test:camera": "playwright test -c playwright.camera.config.ts",
+    "release:rehearse": "node scripts/rehearse-release.mjs"
+  },
+  "dependencies": {
+    "@auth/prisma-adapter": "2.11.3",
+    "@fontsource-variable/manrope": "^5.2.0",
+    "@fontsource-variable/newsreader": "5.3.0",
+    "@prisma/adapter-pg": "7.10.1",
+    "@prisma/client": "7.10.1",
+    "next": "16.4.5",
+    "next-auth": "5.0.0-beta.32",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "server-only": "0.0.1",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@mediapipe/tasks-vision": "1.2.2",
+    "@playwright/test": "1.65.0",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "esbuild": "0.28.2",
+    "eslint": "9.39.5",
+    "eslint-config-next": "16.4.5",
+    "prisma": "7.10.1",
+    "tsx": "4.23.15",
+    "typescript": "^5.9.0"
+  }
+}

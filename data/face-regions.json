@@ -1,0 +1,31 @@
+{
+  "asset": "/assets/images/face_base_neutral.png",
+  "imageSize": [1122, 1402],
+  "status": "Sample eyelid and brow points measured from the supplied model photograph; remaining region estimates are artist authored.",
+  "coordinates": "pixels relative to original image, not viewport CSS",
+  "sampleEyes": [
+    {
+      "lid": [[298.3,608.5],[306.3,600.7],[317,592.7],[335.4,584.3],[364.2,580.3],[393.4,584.2],[423.4,596.7],[446.1,613.1],[456.1,623.9]],
+      "brow": [[239.6,512.4],[269,482.3],[315.2,470.9],[381.6,480.3],[474.4,516.5]],
+      "outerAtStart": true
+    },
+    {
+      "lid": [[664,626.2],[674.2,614.9],[696,598.6],[725.7,586.1],[755.1,582.6],[782.9,586.8],[802.3,595.5],[813.6,603],[822.1,609.9]],
+      "brow": [[635.6,516.5],[727.2,480.5],[795.1,471.2],[844.9,483.4],[879.2,513.3]],
+      "outerAtStart": false
+    }
+  ],
+  "regions": {
+    "lips": {
+      "type": "polygon",
+      "points": [[409, 987], [455, 951], [513, 940], [564, 959], [616, 943], [670, 951], [717, 985], [687, 1029], [622, 1052], [555, 1062], [477, 1049], [427, 1022]],
+      "blendMode": "multiply",
+      "featherPx": 8
+    },
+    "leftCheek": { "type": "ellipse", "cx": 347, "cy": 868, "rx": 135, "ry": 100, "featherPx": 62 },
+    "rightCheek": { "type": "ellipse", "cx": 778, "cy": 864, "rx": 135, "ry": 100, "featherPx": 62 },
+    "leftEye": { "type": "ellipse", "cx": 399, "cy": 630, "rx": 110, "ry": 47, "featherPx": 28 },
+    "rightEye": { "type": "ellipse", "cx": 735, "cy": 628, "rx": 110, "ry": 47, "featherPx": 28 }
+  },
+  "privacy": "Sample model is a synthetic generated asset. Real selfies/live camera require consent and dynamic landmark detection."
+}

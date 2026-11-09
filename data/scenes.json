@@ -1,0 +1,585 @@
+{
+  "coordinateFormat": "rect coordinates are [x, y, width, height] relative to the image's INTRINSIC pixel dimensions; preserve aspect ratio and overlay SVG with matching viewBox",
+  "important": "Initial hotspot bounds are hand-estimated. Codex must visually inspect and fine-tune each outline against the actual images, especially overlapping garments.",
+  "scenes": [
+    {
+      "id": "monochrome-street",
+      "title": "Monochrome Street",
+      "subtitle": "Black & White Edition",
+      "kind": "fashion",
+      "image": "/assets/original/streetwear_flatlay_user.jpg",
+      "imageSize": [736, 1308],
+      "defaultSelectedProductId": "f-pendant",
+      "hotspots": [
+        { "productId": "f-jacket", "rect": [24, 161, 409, 397], "priority": 1 },
+        { "productId": "f-tee", "rect": [174, 194, 122, 334], "priority": 4 },
+        { "productId": "f-pants", "rect": [86, 519, 303, 566], "priority": 2 },
+        { "productId": "f-shoes", "rect": [108, 1053, 259, 106], "priority": 4 },
+        { "productId": "f-headphones", "rect": [467, 154, 170, 185], "priority": 5 },
+        { "productId": "f-sunglasses", "rect": [456, 363, 240, 96], "priority": 5 },
+        { "productId": "f-bracelet", "rect": [438, 495, 134, 76], "priority": 5 },
+        { "productId": "f-rings", "rect": [444, 573, 137, 52], "priority": 5 },
+        { "productId": "f-pendant", "rect": [597, 483, 91, 177], "priority": 9 },
+        { "productId": "f-watch", "rect": [433, 636, 97, 140], "priority": 5 },
+        { "productId": "f-lighter", "rect": [552, 675, 61, 100], "priority": 5 },
+        { "productId": "f-bag", "rect": [412, 790, 166, 245], "priority": 5 }
+      ]
+    },
+    {
+      "id": "soft-rose-edit",
+      "title": "Soft Rose Edit",
+      "subtitle": "Create your signature glow",
+      "kind": "beauty",
+      "image": "/assets/sets/soft-rose-12.webp",
+      "imageSize": [1122, 1402],
+      "photoCrop": [20, 1272],
+      "defaultSelectedProductId": "b-lipstick",
+      "hotspots": [
+        { "productId": "b-blush", "rect": [56, 276, 352, 410], "priority": 4 },
+        { "productId": "b-lipstick", "rect": [400, 269, 113, 402], "priority": 9 },
+        { "productId": "b-foundation", "rect": [624, 178, 192, 465], "priority": 5 },
+        { "productId": "b-serum", "rect": [853, 236, 187, 414], "priority": 5 },
+        { "productId": "b-eyeshadow", "rect": [52, 711, 391, 364], "priority": 5 },
+        { "productId": "b-mascara", "rect": [470, 720, 180, 405], "priority": 5 },
+        { "productId": "b-concealer", "rect": [655, 737, 144, 366], "priority": 5 },
+        { "productId": "b-fragrance", "rect": [803, 672, 285, 444], "priority": 5 },
+        { "productId": "b-brush", "rect": [80, 1091, 817, 211], "priority": 8 },
+        {"productId": "b-rose-liner", "rect": [592, 45, 178, 106], "priority": 5, "shape": "M597 148L613 128L743 50Q753 41 766 52L770 62L761 75L622 140Z"},
+        {"productId": "b-rose-puff", "rect": [760, 28, 157, 152], "priority": 5, "shape": "M765 140L806 57Q819 29 840 32Q854 33 868 59L906 132Q921 163 890 173H793Q758 170 765 140Z"},
+        {"productId": "b-rose-brow", "rect": [925, 111, 176, 45], "priority": 5, "shape": "M929 119Q930 113 938 113H1090Q1098 114 1098 125V140Q1098 151 1089 151H934Q926 150 926 140Z"}
+      ]
+    },
+    {
+      "id": "rose-occasion",
+      "title": "Rose Occasion",
+      "subtitle": "Rose satin, champagne slingbacks, and pearl jewelry.",
+      "kind": "fashion",
+      "image": "/assets/sets/rose-12.webp",
+      "imageSize": [1122, 1402],
+      "photoCrop": [43, 1292],
+      "defaultSelectedProductId": "f-rose-dress",
+      "hotspots": [
+        {"productId": "f-rose-dress", "rect": [20, 116, 501, 1202], "priority": 5, "shape": "M219 120Q268 137 318 119Q351 133 384 143Q415 153 425 223C431 352 447 478 475 597Q450 608 418 609C394 534 382 462 373 365L357 380Q385 469 408 609C427 846 456 1104 514 1256Q510 1281 450 1290Q415 1312 354 1307Q276 1318 200 1306Q150 1308 108 1294Q56 1294 22 1255C67 1075 82 943 99 807C113 599 145 493 185 376L169 312C155 444 140 534 114 610Q83 610 58 598C97 456 111 335 114 210Q123 157 144 144Z"},
+        {"productId": "f-pearl-necklace", "rect": [557, 58, 208, 247], "priority": 5, "shape": "M560 61H570C586 156 615 204 661 235C701 211 743 140 756 61H765C752 147 716 216 669 244L669 258Q683 268 678 286Q674 302 662 303Q644 303 645 284Q644 266 656 258V245C606 214 578 160 560 61Z"},
+        {"productId": "f-pearl-earrings", "rect": [867, 126, 143, 137], "priority": 5, "shape": "M870 187Q880 179 885 153Q887 127 907 129Q926 135 920 162L913 184L913 196Q936 210 925 232Q916 248 902 240Q884 234 892 211Q896 201 903 195V179Q915 161 914 148Q911 133 901 135Q892 135 890 152Q885 185 870 190Z M953 201Q943 175 956 151Q972 137 983 151Q991 164 994 183Q1000 197 1007 202L1003 207Q992 203 986 185L982 162Q975 144 966 151Q953 160 963 184L973 209Q992 224 979 248Q967 265 955 254Q943 244 951 225L960 211Z"},
+        {"productId": "f-gold-watch", "rect": [552, 318, 62, 254], "priority": 5, "shape": "M563 321H597V400Q606 400 606 409V435H612V450H606V479Q606 485 597 487V567H563V488Q554 486 554 479V411Q554 403 563 401Z"},
+        {"productId": "f-pearl-ring", "rect": [702, 390, 106, 110], "priority": 5, "shape": "M706 453Q710 432 724 421Q730 396 754 394Q780 395 786 420Q801 432 803 454Q805 482 784 491Q750 501 722 487Q705 477 706 453Z"},
+        {"productId": "f-tennis-bracelet", "rect": [867, 395, 211, 117], "priority": 5, "shape": "M870 451C869 418 917 398 970 398C1025 399 1075 421 1075 451C1075 484 1029 510 973 510C914 510 870 486 870 451Z"},
+        {"productId": "f-champagne-stole", "rect": [482, 607, 266, 223], "priority": 5, "shape": "M504 621Q522 602 560 612L704 611Q726 613 728 637L728 721Q746 764 745 797Q739 815 715 818Q695 831 638 823Q563 831 507 818Q477 807 486 778L493 704Z"},
+        {"productId": "f-rose-clutch", "rect": [788, 636, 290, 165], "priority": 5, "shape": "M793 644Q796 639 808 640H1066Q1073 640 1074 651V787Q1075 796 1066 798H801Q791 796 791 786V651Z"},
+        {"productId": "f-pearl-comb", "rect": [504, 881, 140, 132], "priority": 5, "shape": "M508 936Q510 918 525 914Q531 899 548 901Q556 885 575 886Q593 886 599 900Q616 898 623 914Q640 918 640 937L626 948L621 1008H520L518 950Z"},
+        {"productId": "f-rose-glasses", "rect": [687, 906, 252, 80], "priority": 5, "shape": "M691 933H704Q715 910 754 910Q789 911 797 930Q814 921 831 931Q843 909 876 910Q912 909 924 932H937V943H926Q914 974 880 980Q840 982 829 946Q814 937 799 946Q793 977 755 979Q720 982 706 947H689Z"},
+        {"productId": "f-crystal-brooch", "rect": [979, 891, 101, 102], "priority": 5, "shape": "M1027 894Q1043 898 1043 925Q1066 919 1078 930Q1071 944 1052 951Q1063 965 1061 986Q1039 990 1029 970Q1020 989 1000 990Q991 977 1004 953Q986 947 982 932Q996 918 1015 929Q1013 906 1027 894Z"},
+        {"productId": "f-rose-heels", "rect": [582, 1041, 410, 264], "priority": 5, "shape": "M586 1253Q604 1217 638 1189Q675 1139 715 1098Q774 1039 806 1044Q830 1045 820 1078L810 1095Q852 1106 828 1136L806 1157V1177H790V1157Q744 1209 704 1238Q646 1258 592 1266Z M714 1290Q742 1252 785 1227Q845 1172 885 1125Q932 1065 949 1070Q977 1078 951 1128Q996 1125 988 1150L959 1187V1210H944V1189Q901 1242 864 1268Q793 1289 723 1300Z"}
+      ]
+    },
+    {
+      "id": "sage-layers",
+      "title": "Sage Layers",
+      "subtitle": "Sage chiffon, ivory crepe, and taupe flats with silver accents.",
+      "kind": "fashion",
+      "image": "/assets/sets/sage-12.webp",
+      "imageSize": [1122, 1402],
+      "photoCrop": [13, 1360],
+      "defaultSelectedProductId": "f-sage-hijab",
+      "hotspots": [
+        {"productId": "f-sage-hijab", "rect": [121, 91, 312, 365], "priority": 5, "shape": "M143 116Q166 100 185 103L403 94Q420 94 426 108V418Q426 429 414 429L151 451Q137 451 138 438L139 389Q125 389 123 373L135 229Z"},
+        {"productId": "f-taupe-skirt", "rect": [22, 486, 486, 876], "priority": 5, "shape": "M167 490H369L376 534Q404 610 426 760L503 1327Q408 1358 275 1355Q123 1357 24 1328L101 760Q129 603 163 530Z"},
+        {"productId": "f-ivory-blouse", "rect": [502, 21, 490, 437], "priority": 5, "shape": "M698 24Q749 40 792 24Q829 43 863 56Q891 75 900 118L941 244Q969 313 982 372L988 416L936 437Q924 427 909 393L891 353L888 416Q837 451 757 453Q658 451 601 417L615 353L572 403L559 438L505 418L514 385Q502 350 521 306L574 146Q604 76 635 56Z"},
+        {"productId": "f-ivory-handbag", "rect": [501, 468, 249, 263], "priority": 5, "shape": "M526 561H548Q553 475 621 471Q681 467 699 551L700 560H725L746 704Q748 722 732 725H517Q504 723 504 706ZM560 560H689Q676 482 624 480Q570 478 560 560Z"},
+        {"productId": "f-taupe-flats", "rect": [832, 478, 185, 274], "priority": 5, "shape": "M843 629C844 568 851 483 885 480C915 480 923 544 922 627C925 684 907 746 886 748Q843 747 836 677Z M935 622C936 548 934 481 962 480C1001 481 1008 565 1011 630L1012 674Q1008 746 966 748Q929 745 929 690Z"},
+        {"productId": "f-emerald-watch", "rect": [530, 765, 84, 190], "priority": 5, "shape": "M553 768H585L589 815Q609 825 609 850H614V861H609Q604 884 590 889L585 950H554L550 891Q533 884 533 854Q535 827 550 816Z"},
+        {"productId": "f-knot-ring", "rect": [690, 831, 112, 73], "priority": 5, "shape": "M695 859Q689 838 736 834Q780 833 792 847Q802 860 790 879Q775 895 754 900Q736 901 727 885Q701 881 695 859Z"},
+        {"productId": "f-silver-cuff", "rect": [869, 813, 151, 108], "priority": 5, "shape": "M872 846Q874 822 913 817Q925 822 919 838L915 851Q941 862 974 852Q966 841 969 824Q972 813 988 820Q1017 829 1017 848L1014 883Q1007 913 952 916Q895 916 874 888Z"},
+        {"productId": "f-crescent-necklace", "rect": [518, 970, 207, 213], "priority": 5, "shape": "M522 975L528 973C555 1052 578 1102 619 1133C655 1105 685 1057 718 974L724 976C690 1064 660 1107 627 1140Q618 1147 617 1161Q621 1178 636 1169Q630 1184 617 1180Q602 1175 605 1159Q607 1148 614 1140C574 1112 547 1055 522 975Z"},
+        {"productId": "f-olive-glasses", "rect": [778, 1020, 280, 105], "priority": 5, "shape": "M788 1030Q815 1021 868 1023Q899 1024 908 1042H929Q942 1024 971 1023Q1023 1023 1047 1031L1045 1053L1034 1089L1053 1106L1046 1114L1026 1105Q1010 1124 975 1122Q944 1122 936 1095L929 1057H907L895 1094Q887 1123 854 1122Q821 1121 806 1107L788 1115L782 1107L800 1086Z"},
+        {"productId": "f-hijab-pins", "rect": [542, 1238, 157, 69], "priority": 5, "shape": "M575 1240A32 32 0 1 1 575 1304A32 32 0 1 1 575 1240Z M662 1240A32 32 0 1 1 662 1304A32 32 0 1 1 662 1240Z"},
+        {"productId": "f-woven-belt", "rect": [764, 1222, 314, 106], "priority": 5, "shape": "M768 1260C770 1233 833 1224 906 1224Q1016 1224 1044 1250Q1050 1268 1030 1277L1073 1277L1075 1303Q1065 1314 1039 1315L935 1317Q919 1330 885 1324Q857 1320 852 1311Q799 1312 775 1295Q763 1284 768 1260Z"}
+      ]
+    },
+    {
+      "id": "warm-bronze",
+      "title": "Warm Bronze",
+      "subtitle": "Bronze eyes, apricot blush, and Golden Veil skin tint.",
+      "kind": "beauty",
+      "image": "/assets/sets/bronze-grid-12.webp",
+      "imageSize": [1072, 1467],
+      "defaultSelectedProductId": "b-bronze-shadow",
+      "hotspots": [
+        {"productId": "b-bronze-shadow", "rect": [101, 57, 205, 304], "priority": 5, "shape": "M105 57L298 57L306 151L292 168L302 344L285 361L105 361L101 160Z"},
+        {"productId": "b-apricot-blush", "rect": [415, 48, 227, 311], "priority": 5, "shape": "M428 78L468 52L585 48L634 74L642 117L619 145L642 202L640 279L606 332L558 359L499 355L447 334L422 287L415 216L441 149L426 130Z"},
+        {"productId": "b-golden-tint", "rect": [791, 10, 145, 343], "priority": 5, "shape": "M839 17L877 10L890 32L890 76L913 82L915 134L933 145L936 321L917 353L803 353L791 323L791 160L816 136L816 84L837 78Z"},
+        {"productId": "b-caramel-lip", "rect": [159, 382, 88, 327], "priority": 5, "shape": "M176 415L197 382L216 397L225 426L224 481L237 485L237 598L247 602L241 709L161 709L159 598L166 594L166 483L178 478Z"},
+        {"productId": "b-cinnamon-liner", "rect": [518, 378, 32, 340], "priority": 5, "shape": "M533 378L550 432L550 718L518 718L518 430Z"},
+        {"productId": "b-gold-illuminator", "rect": [799, 386, 164, 319], "priority": 5, "shape": "M799 386L963 390L934 506L913 636L917 705L839 705L835 628L810 508Z"},
+        {"productId": "b-amber-brow", "rect": [132, 737, 155, 302], "priority": 5, "shape": "M141 793L187 777L193 810L210 825L204 1031L132 1035L132 827Z M241 747L254 737L269 751L264 898L287 902L285 1037L218 1039L220 904L245 900Z"},
+        {"productId": "b-honey-balm", "rect": [428, 751, 216, 284], "priority": 5, "shape": "M447 783L485 756L554 751L617 768L636 793L629 844L613 861L638 909L644 949L625 999L589 1026L516 1035L457 1009L432 968L428 913L453 860L440 831Z"},
+        {"productId": "b-angled-brush", "rect": [847, 734, 43, 307], "priority": 5, "shape": "M847 749L883 734L890 764L887 835L887 1037L854 1041L854 837Z"},
+        {"productId": "b-cinnamon-bronzer", "rect": [55, 1085, 289, 340], "priority": 5, "shape": "M73 1110L128 1087L247 1085L334 1110L338 1140L315 1163L289 1173L332 1217L344 1270L334 1343L290 1400L237 1425L157 1423L94 1398L61 1341L55 1286L76 1224L120 1175L73 1158Z"},
+        {"productId": "b-ivory-sponge", "rect": [441, 1114, 191, 275], "priority": 5, "shape": "M525 1114L547 1116L585 1158L613 1215L632 1274L629 1324L604 1366L568 1385L506 1389L462 1364L441 1324L441 1284L455 1219L483 1156Z"},
+        {"productId": "b-amber-mist", "rect": [789, 1058, 157, 371], "priority": 5, "shape": "M827 1058L906 1058L911 1184L933 1205L946 1238L946 1396L925 1429L804 1427L789 1404L789 1226L810 1190L827 1184Z"}
+      ]
+    },
+    {
+      "id": "berry-muse",
+      "title": "Berry Muse",
+      "subtitle": "Deep berry lips, plum-toned eyes, and Plum Lash mascara.",
+      "kind": "beauty",
+      "image": "/assets/sets/berry-grid-12.webp",
+      "imageSize": [1072, 1467],
+      "defaultSelectedProductId": "b-berry-lip",
+      "hotspots": [
+        {"productId": "b-berry-lip", "rect": [92, 17, 183, 333], "priority": 5, "shape": "M94 157L170 149L170 348L92 348Z M199 50L237 17L254 46L254 115L268 118L268 222L275 229L275 346L180 350L180 229L191 222L191 118L199 117Z"},
+        {"productId": "b-plum-shadow", "rect": [413, 63, 241, 294], "priority": 5, "shape": "M418 73L457 65L615 63L652 76L654 115L636 149L634 306L621 342L594 357L461 357L432 334L420 304L420 153L413 128Z"},
+        {"productId": "b-plum-mascara", "rect": [787, 25, 186, 330], "priority": 5, "shape": "M787 86L793 52L845 48L852 82L862 88L860 351L787 351Z M917 40L931 25L944 40L940 220L969 223L973 353L892 355L892 227L919 222Z"},
+        {"productId": "b-berry-blush", "rect": [80, 430, 245, 286], "priority": 5, "shape": "M84 453L126 434L227 430L313 449L319 468L310 485L279 499L310 541L325 598L313 655L285 697L239 716L153 716L103 682L80 627L80 565L117 499L86 483Z"},
+        {"productId": "b-mulberry-oil", "rect": [485, 393, 107, 329], "priority": 5, "shape": "M495 393L587 395L590 518L585 529L592 697L575 722L510 722L487 701L485 537L491 521Z"},
+        {"productId": "b-burgundy-pencil", "rect": [848, 392, 41, 338], "priority": 5, "shape": "M868 392L889 430L887 728L848 730L848 432Z"},
+        {"productId": "b-lavender-concealer", "rect": [141, 747, 123, 294], "priority": 5, "shape": "M141 747L264 747L258 802L239 934L241 1039L164 1041L162 938Z"},
+        {"productId": "b-berry-scrub", "rect": [409, 777, 245, 253], "priority": 5, "shape": "M436 819L483 789L525 777L587 789L629 821L654 869L654 965L629 1003L589 1024L482 1030L434 1005L409 970L409 890Z"},
+        {"productId": "b-lavender-powder", "rect": [751, 762, 258, 281], "priority": 5, "shape": "M803 785L856 762L900 764L954 785L992 833L1009 892L1003 951L980 999L923 1035L858 1043L804 1024L766 978L751 919L757 858Z"},
+        {"productId": "b-lash-curler", "rect": [90, 1083, 202, 361], "priority": 5, "shape": "M130 1085L264 1083L275 1131L256 1190L235 1228L229 1301L252 1335L292 1394L279 1429L245 1444L206 1423L197 1375L199 1318L176 1312L168 1356L182 1414L151 1442L103 1427L90 1393L103 1347L139 1301L147 1240L124 1192L113 1133Z"},
+        {"productId": "b-fan-brush", "rect": [428, 1064, 206, 380], "priority": 5, "shape": "M428 1129L468 1083L524 1064L581 1074L634 1114L621 1140L585 1163L547 1184L552 1236L548 1440L512 1444L510 1244L518 1184L474 1159Z"},
+        {"productId": "b-lilac-highlight", "rect": [762, 1089, 230, 328], "priority": 5, "shape": "M782 1123L789 1102L818 1089L852 1098L866 1131L866 1205L875 1215L873 1415L762 1415L762 1213L774 1209L774 1137Z M889 1180L982 1175L992 1200L990 1412L885 1417Z"}
+      ]
+    },
+    {
+      "id": "peach-atelier",
+      "title": "Peach Atelier",
+      "subtitle": "Apricot color, soft peach lips, and airy brown lashes.",
+      "kind": "beauty",
+      "image": "/assets/sets/peach-atelier-12.webp",
+      "imageSize": [
+        1086,
+        1448
+      ],
+      "defaultSelectedProductId": "b-peach-souffle",
+      "hotspots": [
+        {
+          "productId": "b-peach-souffle",
+          "rect": [
+            145,
+            46,
+            186,
+            296
+          ],
+          "priority": 5,
+          "shape": "M145 309L185 194L250 213L225 322L200 334Z M250 337L251 233L257 231L257 131L265 129L266 75L286 53L302 46L314 66L314 129L325 133L327 236L331 240L331 342Z"
+        },
+        {
+          "productId": "b-apricot-veil-shadow",
+          "rect": [
+            446,
+            89,
+            216,
+            255
+          ],
+          "priority": 5,
+          "shape": "M446 159L464 123L508 99L571 89L615 96L646 114L660 145L662 179L648 200L626 205L644 222L657 252L653 285L639 311L611 332L572 344L523 344L483 326L456 302L449 273L449 240L468 216L485 205L461 196L449 180Z"
+        },
+        {
+          "productId": "b-nectarine-flush",
+          "rect": [
+            762,
+            106,
+            230,
+            237
+          ],
+          "priority": 5,
+          "shape": "M762 226L772 181L793 145L829 119L875 106L920 109L954 126L979 157L992 201L992 251L982 286L951 315L914 335L873 343L831 337L798 317L776 287L764 256Z"
+        },
+        {
+          "productId": "b-peach-skin-veil",
+          "rect": [
+            159,
+            371,
+            130,
+            285
+          ],
+          "priority": 5,
+          "shape": "M160 483L168 472L185 472L184 391L178 384L180 373L242 371L256 380L258 390L249 399L252 420L262 426L264 472L283 477L289 489L289 648L283 656L166 656L159 648Z"
+        },
+        {
+          "productId": "b-soft-taupe-sculpt",
+          "rect": [
+            490,
+            398,
+            108,
+            241
+          ],
+          "priority": 5,
+          "shape": "M490 453L500 448L507 449L507 412L518 403L544 398L566 401L579 410L581 447L587 451L589 533L598 535L598 633L586 639L500 639L490 632Z"
+        },
+        {
+          "productId": "b-honey-brow",
+          "rect": [
+            755,
+            411,
+            250,
+            223
+          ],
+          "priority": 5,
+          "shape": "M755 524L767 492L789 472L818 461L846 461L856 438L877 419L901 411L927 416L955 433L977 453L996 480L1005 513L1000 537L980 558L963 570L940 566L930 596L903 617L877 631L835 634L799 619L773 595L759 567Z"
+        },
+        {
+          "productId": "b-cocoa-feather-lash",
+          "rect": [
+            184,
+            682,
+            80,
+            328
+          ],
+          "priority": 5,
+          "shape": "M184 824L198 700L205 682L227 683L248 690L263 808L264 823L254 947L244 1005L232 1010L205 1009L195 974Z"
+        },
+        {
+          "productId": "b-copper-silk-liner",
+          "rect": [
+            527,
+            690,
+            33,
+            307
+          ],
+          "priority": 5,
+          "shape": "M527 995L529 732L541 690L547 693L560 733L559 991L550 997Z"
+        },
+        {
+          "productId": "b-peach-glaze",
+          "rect": [
+            807,
+            690,
+            79,
+            318
+          ],
+          "priority": 5,
+          "shape": "M807 994L809 698L815 690L881 690L886 697L885 997L877 1008L817 1008Z"
+        },
+        {
+          "productId": "b-pearl-fan",
+          "rect": [
+            79,
+            1028,
+            250,
+            396
+          ],
+          "priority": 5,
+          "shape": "M79 1101L95 1065L140 1044L194 1028L244 1034L290 1050L326 1084L329 1101L304 1121L267 1143L233 1162L223 1205L222 1368L212 1417L200 1424L190 1417L184 1395L181 1220L179 1170L153 1150L107 1132Z"
+        },
+        {
+          "productId": "b-orchard-mist",
+          "rect": [
+            480,
+            1020,
+            124,
+            387
+          ],
+          "priority": 5,
+          "shape": "M480 1397L480 1150L490 1137L503 1134L503 1030L514 1020L570 1020L582 1028L583 1131L600 1141L604 1150L604 1397L589 1407L494 1407Z"
+        },
+        {
+          "productId": "b-apricot-puff",
+          "rect": [
+            744,
+            1086,
+            277,
+            264
+          ],
+          "priority": 5,
+          "shape": "M744 1299L747 1268L771 1222L824 1144L860 1099L888 1086L908 1098L939 1140L982 1205L1011 1267L1021 1297L1002 1319L965 1339L912 1350L854 1348L802 1336L762 1319Z"
+        }
+      ]
+    },
+    {
+      "id": "mocha-sculpt",
+      "title": "Mocha Sculpt",
+      "subtitle": "Caramel neutrals, deeper brow definition, and sculpted warmth.",
+      "kind": "beauty",
+      "image": "/assets/sets/mocha-sculpt-12.webp",
+      "imageSize": [
+        1086,
+        1448
+      ],
+      "defaultSelectedProductId": "b-toffee-velvet",
+      "hotspots": [
+        {
+          "productId": "b-toffee-velvet",
+          "rect": [
+            178,
+            48,
+            94,
+            291
+          ],
+          "priority": 5,
+          "shape": "M178 332L178 240L192 230L192 137L200 134L201 99L213 72L235 48L242 55L251 80L253 134L259 138L260 232L272 238L272 336L266 339L186 339Z"
+        },
+        {
+          "productId": "b-espresso-satin-shadow",
+          "rect": [
+            414,
+            45,
+            252,
+            302
+          ],
+          "priority": 5,
+          "shape": "M417 46L659 45L665 65L666 119L658 133L658 335L651 347L429 347L419 340L417 130L414 111Z"
+        },
+        {
+          "productId": "b-burnt-honey-flush",
+          "rect": [
+            757,
+            62,
+            231,
+            286
+          ],
+          "priority": 5,
+          "shape": "M757 244L764 197L785 150L772 130L769 105L786 84L822 67L870 62L913 72L953 85L979 102L988 124L987 138L964 149L970 170L985 213L985 255L971 291L948 318L909 342L873 348L834 342L801 325L776 298L760 265Z"
+        },
+        {
+          "productId": "b-caramel-skin-tint",
+          "rect": [
+            142,
+            373,
+            135,
+            319
+          ],
+          "priority": 5,
+          "shape": "M143 678L142 488L150 475L168 472L169 421L179 414L181 385L190 376L243 373L248 380L246 390L230 392L230 416L246 423L248 471L270 478L277 489L277 680L270 691L152 692Z"
+        },
+        {
+          "productId": "b-mocha-cream-contour",
+          "rect": [
+            412,
+            405,
+            278,
+            270
+          ],
+          "priority": 5,
+          "shape": "M412 554L417 522L432 498L460 477L490 464L517 460L518 439L530 419L548 406L568 405L600 415L639 440L664 468L681 496L690 517L685 538L672 552L632 552L622 597L606 630L577 653L544 671L501 675L465 661L437 639L419 610Z"
+        },
+        {
+          "productId": "b-espresso-brow-pencil",
+          "rect": [
+            785,
+            380,
+            177,
+            330
+          ],
+          "priority": 5,
+          "shape": "M785 706L786 687L809 644L818 622L932 407L948 384L962 380L962 392L956 403L834 627L822 650L807 690L796 710Z"
+        },
+        {
+          "productId": "b-umber-lash",
+          "rect": [
+            177,
+            723,
+            71,
+            313
+          ],
+          "priority": 5,
+          "shape": "M178 1028L177 736L184 727L238 723L248 733L247 1034L184 1036Z"
+        },
+        {
+          "productId": "b-roasted-bronze-liner",
+          "rect": [
+            449,
+            724,
+            145,
+            334
+          ],
+          "priority": 5,
+          "shape": "M449 1042L566 773L580 741L594 724L590 753L585 773L474 1051L467 1058Z"
+        },
+        {
+          "productId": "b-caramel-balm",
+          "rect": [
+            747,
+            776,
+            224,
+            219
+          ],
+          "priority": 5,
+          "shape": "M747 913L750 856L766 825L796 797L828 783L869 776L907 784L938 801L960 830L971 871L968 930L954 957L926 976L894 989L852 995L814 986L781 970L757 946Z"
+        },
+        {
+          "productId": "b-sculpt-brush",
+          "rect": [
+            128,
+            1062,
+            167,
+            356
+          ],
+          "priority": 5,
+          "shape": "M128 1391L143 1319L170 1225L175 1200L173 1176L164 1149L171 1117L194 1091L236 1069L272 1062L295 1075L289 1094L268 1138L251 1166L228 1233L199 1314L173 1394L159 1412L143 1418L131 1411Z"
+        },
+        {
+          "productId": "b-amber-setting-powder",
+          "rect": [
+            383,
+            1095,
+            303,
+            303
+          ],
+          "priority": 5,
+          "shape": "M383 1295L388 1252L407 1216L432 1192L454 1183L455 1155L469 1124L491 1105L518 1095L554 1097L598 1108L638 1128L674 1153L685 1175L686 1197L668 1222L640 1234L641 1283L627 1333L607 1360L573 1380L531 1395L481 1398L437 1380L407 1357L389 1320Z"
+        },
+        {
+          "productId": "b-cocoa-blender",
+          "rect": [
+            776,
+            1101,
+            173,
+            263
+          ],
+          "priority": 5,
+          "shape": "M776 1278L783 1234L803 1185L829 1140L858 1101L881 1120L910 1160L933 1207L947 1252L949 1293L936 1324L914 1347L884 1363L854 1364L825 1353L803 1334L786 1310Z"
+        }
+      ]
+    },
+    {
+      "id": "midnight-pearl",
+      "title": "Midnight Pearl",
+      "subtitle": "Cool shimmer, mauve accents, and a soft smoky eye.",
+      "kind": "beauty",
+      "image": "/assets/sets/midnight-pearl-12.webp",
+      "imageSize": [
+        1086,
+        1448
+      ],
+      "defaultSelectedProductId": "b-plum-silk-lip",
+      "hotspots": [
+        {
+          "productId": "b-plum-silk-lip",
+          "rect": [
+            69,
+            30,
+            216,
+            315
+          ],
+          "priority": 5,
+          "shape": "M69 306L120 194L134 185L168 193L187 212L139 333L123 339L91 327Z M172 324L196 213L205 209L224 111L231 107L238 62L253 39L271 30L281 45L285 64L278 115L283 120L266 221L274 228L251 340L240 345L184 338Z"
+        },
+        {
+          "productId": "b-smoke-pearl-shadow",
+          "rect": [
+            434,
+            40,
+            225,
+            306
+          ],
+          "priority": 5,
+          "shape": "M434 107L453 81L489 57L531 44L580 40L617 47L635 63L640 88L629 111L611 129L585 142L616 154L641 183L656 218L659 254L651 284L629 313L597 334L559 346L522 342L491 329L466 306L451 277L452 241L459 209L476 183L504 162L467 152L440 135Z"
+        },
+        {
+          "productId": "b-mauve-cloud-blush",
+          "rect": [
+            761,
+            50,
+            279,
+            297
+          ],
+          "priority": 5,
+          "shape": "M761 142L775 112L802 88L842 68L895 55L943 50L980 61L1000 77L1006 97L998 124L975 146L948 155L978 161L1009 182L1032 212L1040 241L1035 275L1016 304L990 324L947 341L903 347L857 344L821 329L793 306L778 278L775 247L789 215L817 190L840 175L804 180L776 173L763 158Z"
+        },
+        {
+          "productId": "b-cool-pearl-tint",
+          "rect": [
+            83,
+            384,
+            163,
+            320
+          ],
+          "priority": 5,
+          "shape": "M83 669L103 509L112 489L141 483L150 423L155 420L158 398L169 389L193 384L224 387L234 396L230 405L218 407L219 425L225 432L218 486L239 495L246 508L225 681L215 704L97 692L87 685Z"
+        },
+        {
+          "productId": "b-cool-sculpt-duo",
+          "rect": [
+            387,
+            414,
+            281,
+            259
+          ],
+          "priority": 5,
+          "shape": "M389 414L659 414L668 437L660 493L668 511L668 661L659 672L404 673L396 663L396 518L400 498L387 445Z"
+        },
+        {
+          "productId": "b-ash-brow-pomade",
+          "rect": [
+            782,
+            417,
+            259,
+            239
+          ],
+          "priority": 5,
+          "shape": "M782 629L787 496L796 481L833 478L864 475L896 481L894 459L904 437L924 421L943 417L964 424L995 446L1018 474L1034 505L1041 535L1031 557L1011 574L989 578L954 564L952 627L938 652L798 656Z"
+        },
+        {
+          "productId": "b-midnight-lash",
+          "rect": [
+            109,
+            700,
+            185,
+            363
+          ],
+          "priority": 5,
+          "shape": "M109 1038L230 713L240 700L261 701L289 716L294 728L169 1046L161 1061L146 1063L122 1054Z"
+        },
+        {
+          "productId": "b-violet-ink-liner",
+          "rect": [
+            464,
+            704,
+            151,
+            358
+          ],
+          "priority": 5,
+          "shape": "M464 1041L566 775L586 743L615 704L608 740L600 773L496 1054L487 1062L471 1057Z"
+        },
+        {
+          "productId": "b-moonstone-gloss",
+          "rect": [
+            801,
+            699,
+            180,
+            364
+          ],
+          "priority": 5,
+          "shape": "M801 1037L924 704L932 699L977 718L981 727L855 1059L845 1063L803 1051Z"
+        },
+        {
+          "productId": "b-silver-detail-brush",
+          "rect": [
+            88,
+            1089,
+            187,
+            305
+          ],
+          "priority": 5,
+          "shape": "M88 1375L244 1125L261 1097L269 1089L275 1094L272 1107L263 1125L104 1390L95 1394L88 1387Z"
+        },
+        {
+          "productId": "b-porcelain-powder",
+          "rect": [
+            389,
+            1111,
+            250,
+            263
+          ],
+          "priority": 5,
+          "shape": "M389 1253L394 1214L409 1174L438 1143L473 1121L514 1111L553 1116L589 1133L616 1161L633 1195L639 1237L634 1279L616 1318L586 1348L552 1367L515 1374L476 1366L441 1348L414 1322L397 1290Z"
+        },
+        {
+          "productId": "b-silk-lash-comb",
+          "rect": [
+            746,
+            1106,
+            235,
+            279
+          ],
+          "priority": 5,
+          "shape": "M746 1147L761 1118L772 1107L785 1106L878 1144L898 1161L911 1180L953 1249L981 1343L981 1371L974 1380L960 1385L947 1375L919 1310L890 1246L867 1193L843 1179L833 1186Z"
+        }
+      ]
+    }
+  ]
+}

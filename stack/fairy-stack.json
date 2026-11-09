@@ -1,0 +1,16 @@
+{
+  "project": "FAIRY",
+  "decisionStatus": "locked",
+  "language": "TypeScript (strict)",
+  "frontend": { "framework": "Next.js", "router": "App Router", "library": "React", "styling": ["CSS Modules", "CSS custom properties"] },
+  "backend": { "runtime": "Node.js (supported version)", "framework": "Next.js Route Handlers and server-only services", "validation": "Zod" },
+  "data": { "database": "PostgreSQL", "orm": "Prisma ORM", "schema": "prisma/schema.prisma", "migrationStrategy": "Prisma Migrate", "seed": ["data/catalog.json", "data/scenes.json", "data/look-presets.json"] },
+  "authentication": { "library": "Auth.js", "adapter": "Prisma Adapter", "roles": ["CUSTOMER", "STAFF", "ADMIN"], "productionProviders": "owner decision pending" },
+  "testing": { "browser": "Playwright", "visualViewport": [1672, 941], "unit": "Vitest or framework-compatible TypeScript test runner" },
+  "virtualBeauty": { "mvp": "local simulated Canvas/SVG overlays", "future": "MediaPipe Face Landmarker with opt-in camera consent" },
+  "virtualFashion": { "mvp": "honest 2D mannequin", "future": "Three.js + licensed rigged GLB garments" },
+  "deferred": ["real payment processor", "shipping/tax business rules", "production hosting", "licensed full 3D assets", "camera production privacy approval"],
+  "forbiddenSubstitutionsWithoutApproval": ["Vite", "PHP/XAMPP", "MySQL", "SQLite", "Firebase backend", "Supabase backend", "generic UI template"],
+  "configuration": [".env.example", "prisma.config.ts.example"],
+  "specifications": ["docs/09_LOCKED_TECH_STACK.md", "docs/10_DATABASE_SCHEMA.md", "docs/11_API_CONTRACT.md", "docs/12_AUTH_ADMIN_SECURITY.md"]
+}

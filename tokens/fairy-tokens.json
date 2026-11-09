@@ -1,0 +1,67 @@
+{
+  "brand": {
+    "name": "FAIRY",
+    "tagline": "A new way to discover your style",
+    "tone": "editorial luxury, minimal and sophisticated; never whimsical or fantasy-themed"
+  },
+  "referenceViewport": { "width": 1672, "height": 941, "deviceScaleFactor": 1 },
+  "colors": {
+    "espresso": "#171512",
+    "pearl": "#F7F3EC",
+    "charcoal": "#272321",
+    "champagne": "#B59A80",
+    "border": "#DDD5CB",
+    "ivoryWhite": "#FFFCF8",
+    "mutedText": "#6D655F",
+    "roseAccent": "#BE8277",
+    "selectedOutline": "#C39170",
+    "danger": "#9D3F46"
+  },
+  "typography": {
+    "status": "inferred approximation from raster screenshot; verify in rendered comparison",
+    "display": {
+      "candidate": "Bodoni Moda",
+      "fallbacks": ["Didot", "Times New Roman", "Georgia", "serif"],
+      "weight": 400,
+      "letterSpacing": "-0.035em"
+    },
+    "body": {
+      "candidate": "Manrope",
+      "fallbacks": ["Arial", "sans-serif"],
+      "weight": 400,
+      "letterSpacing": "0em"
+    },
+    "navigation": { "family": "display", "size": 21, "lineHeight": 1.1 },
+    "logo": { "family": "display", "size": 46, "lineHeight": 1, "letterSpacing": "-0.055em" },
+    "hero": { "family": "display", "size": 72, "lineHeight": 1.02, "letterSpacing": "-0.045em" },
+    "pageTitle": { "family": "display", "size": 62, "lineHeight": 1.04, "letterSpacing": "-0.04em" },
+    "sectionTitle": { "family": "display", "size": 50, "lineHeight": 1.05 },
+    "productTitle": { "family": "display", "size": 43, "lineHeight": 1.08 },
+    "bodyText": { "family": "body", "size": 16, "lineHeight": 1.6 },
+    "microLabel": { "family": "body", "size": 12, "weight": 600, "letterSpacing": "0.2em" },
+    "button": { "family": "display", "size": 24, "lineHeight": 1.1 }
+  },
+  "layout": {
+    "announcementHeight": 35,
+    "navHeight": 64,
+    "desktopPageGutter": 48,
+    "contentMaxWidth": 1600,
+    "homepageHeroHeight": 439,
+    "desktopCategoryGap": 14,
+    "desktopPageTopContent": 99,
+    "fashionImageAspectRatio": 0.56269,
+    "makeupImageAspectRatio": 0.80028
+  },
+  "radii": { "xs": 4, "sm": 8, "card": 12, "pill": 999 },
+  "borders": { "thin": "1px solid #DDD5CB", "focus": "2px solid #B59A80" },
+  "shadow": { "card": "0 10px 24px rgba(23,21,18,0.06)", "popover": "0 18px 50px rgba(23,21,18,0.16)" },
+  "motion": {
+    "hoverMs": 150,
+    "drawerMs": 260,
+    "zoomMs": 420,
+    "pageTransitionMs": 420,
+    "easing": "cubic-bezier(0.2,0.75,0.2,1)",
+    "respectReducedMotion": true
+  },
+  "breakpoints": { "mobileMax": 639, "tabletMax": 1023, "desktopMin": 1024 }
+}

@@ -1,0 +1,24 @@
+:root {
+  --color-espresso: #171512;
+  --color-pearl: #f8f1e9;
+  --color-ink: #000;
+  --color-charcoal: #272321;
+  --color-champagne: #b59a80;
+  --color-border: #ddd5cb;
+  --color-ivory-white: #fffcf8;
+  --color-muted: #6d655f;
+  --color-rose: #8f514a;
+  --color-rose-wash: #f7e9e4;
+  --color-rose-border: #ddbbb4;
+  --color-success: #35624b;
+  --color-error: #9a332d;
+  --color-action-hover: #3d2e24;
+  --font-display: "Newsreader Variable", Didot, "Times New Roman", Georgia, serif;
+  --font-body: "Manrope Variable", Arial, sans-serif;
+  --gutter: clamp(24px, 2.8vw, 48px);
+  --content-max: 1600px;
+  --radius-control: 8px;
+  --radius-card: 11px;
+  --transition-fast: 150ms ease;
+  --transition-panel: 240ms cubic-bezier(.22, .75, .25, 1);
+}
