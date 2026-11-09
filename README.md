@@ -1,5 +1,7 @@
 # FAIRY
 
+**Live demo:** [fairy-demo.onrender.com](https://fairy-demo.onrender.com) (free plan, so the first visit can take about a minute to wake up)
+
 The approved homepage leads to the Monochrome Street fashion scene and the Soft Rose Edit makeup scene. It uses Next.js App Router, React, strict TypeScript, CSS Modules, and the supplied FAIRY artwork and catalog fixtures.
 
 ## Run locally
